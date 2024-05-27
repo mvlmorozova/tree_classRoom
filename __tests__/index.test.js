@@ -206,7 +206,14 @@ describe('task4', () => {
     expect(funcs.addInternalElement()).toBeUndefined();
   });
   it('should work', () => {
-    expect(funcs.addInternalElement(tree)).toEqual(result);
+    expect(
+      funcs.addInternalElement(tree, 'column', {
+        name: 'article',
+        type: 'tag-internal',
+        className: 'article',
+        children: [],
+      }),
+    ).toEqual(result);
   });
 });
 
